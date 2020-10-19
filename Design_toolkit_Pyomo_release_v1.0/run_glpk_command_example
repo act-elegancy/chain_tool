@@ -1,0 +1,1 @@
+pyomo solve RTN_implementation.py RTN_implementation.dat --solver glpk --solver-options="mipgap=0.05 tmlim=180"

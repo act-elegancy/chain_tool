@@ -1,0 +1,1 @@
+pyomo solve RTN_implementation.py RTN_implementation.dat --solver gurobi --solver-stream --solver-options="MIPGap=0.05"

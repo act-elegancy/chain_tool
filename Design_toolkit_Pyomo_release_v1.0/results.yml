@@ -1,0 +1,1239 @@
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Name: unknown
+  Lower bound: -inf
+  Upper bound: inf
+  Number of objectives: 1
+  Number of constraints: 99911
+  Number of variables: 126612
+  Number of nonzeros: 492619
+  Sense: minimize
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: ok
+  Termination condition: feasible
+  Statistics: 
+    Branch and bound: 
+      Number of bounded subproblems: 0
+      Number of created subproblems: 0
+  Error rc: 0
+  Time: 3035.2911162376404
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: None
+  Status: feasible
+  Message: None
+  Objective:
+    obj:
+      Value: 5254424.405134502
+  Variable:
+    emission_rate[EMITTED_CO2,1,1,1,LL]:
+      Value: 1.36900821832329
+    emission_rate[EMITTED_CO2,10,1,1,LL]:
+      Value: 0.673151358082865
+    emission_rate[EMITTED_CO2,11,1,1,LL]:
+      Value: 1.82311826147443
+    emission_rate[EMITTED_CO2,12,1,1,LL]:
+      Value: 1.29554924075472
+    emission_rate[EMITTED_CO2,13,1,1,LL]:
+      Value: 0.226387212688583
+    emission_rate[EMITTED_CO2,14,1,1,LL]:
+      Value: 0.276472879212605
+    emission_rate[EMITTED_CO2,15,1,1,LL]:
+      Value: 41.4709318818908
+    emission_rate[EMITTED_CO2,16,1,1,LL]:
+      Value: 8.21404930993972
+    emission_rate[EMITTED_CO2,17,1,1,LL]:
+      Value: 1.52928235120016
+    emission_rate[EMITTED_CO2,18,1,1,LL]:
+      Value: 32.4444095260534
+    emission_rate[EMITTED_CO2,19,1,1,LL]:
+      Value: 17.1894007510446
+    emission_rate[EMITTED_CO2,2,1,1,LL]:
+      Value: 0.995035241610584
+    emission_rate[EMITTED_CO2,20,1,1,LL]:
+      Value: 11.2191893013811
+    emission_rate[EMITTED_CO2,21,1,1,LL]:
+      Value: 13.2422499716377
+    emission_rate[EMITTED_CO2,22,1,1,LL]:
+      Value: 1.39718975335414
+    emission_rate[EMITTED_CO2,24,1,1,LL]:
+      Value: 1.09787781020658
+    emission_rate[EMITTED_CO2,25,1,1,LL]:
+      Value: 2.21712550479674
+    emission_rate[EMITTED_CO2,26,1,1,LL]:
+      Value: 2.12363226061856
+    emission_rate[EMITTED_CO2,28,1,1,LL]:
+      Value: 7.47945953425405
+    emission_rate[EMITTED_CO2,29,1,1,LL]:
+      Value: 8.79061874897491
+    emission_rate[EMITTED_CO2,3,1,1,LL]:
+      Value: 0.774658308904884
+    emission_rate[EMITTED_CO2,30,1,1,LL]:
+      Value: 2.85822203630423
+    emission_rate[EMITTED_CO2,31,1,1,LL]:
+      Value: 22.9726257123517
+    emission_rate[EMITTED_CO2,32,1,1,LL]:
+      Value: 0.48482925195254
+    emission_rate[EMITTED_CO2,33,1,1,LL]:
+      Value: 0.394007243322312
+    emission_rate[EMITTED_CO2,34,1,1,LL]:
+      Value: 0.801370664384363
+    emission_rate[EMITTED_CO2,35,1,1,LL]:
+      Value: 0.472808691986774
+    emission_rate[EMITTED_CO2,36,1,1,LL]:
+      Value: 9.08220086302278
+    emission_rate[EMITTED_CO2,37,1,1,LL]:
+      Value: 0.928254352911887
+    emission_rate[EMITTED_CO2,38,1,1,LL]:
+      Value: 0.674486975856839
+    emission_rate[EMITTED_CO2,39,1,1,LL]:
+      Value: 2.53099568168061
+    emission_rate[EMITTED_CO2,4,1,1,LL]:
+      Value: 0.794692575514493
+    emission_rate[EMITTED_CO2,43,1,1,LL]:
+      Value: 18.8322106130325
+    emission_rate[EMITTED_CO2,5,1,1,LL]:
+      Value: 1.05513804143941
+    emission_rate[EMITTED_CO2,6,1,1,LL]:
+      Value: 0.988357152740714
+    emission_rate[EMITTED_CO2,7,1,1,LL]:
+      Value: 0.232397492671465
+    emission_rate[EMITTED_CO2,8,1,1,LL]:
+      Value: 11.7534364109707
+    emission_rate[EMITTED_CO2,9,1,1,LL]:
+      Value: 0.204349519418013
+    emission_rate[GENERATED_CO2,11,1,1,LL]:
+      Value: 1.77635683940025e-15
+    emission_rate[GENERATED_CO2,21,1,1,LL]:
+      Value: -7.105427357601e-15
+    emission_rate[GENERATED_CO2,37,1,1,LL]:
+      Value: -8.88178419700125e-16
+    flow_rate[1,5,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 54.0858417570746
+    flow_rate[10,13,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 746324.341738403
+    flow_rate[10,7,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 6.73151358082865
+    flow_rate[10,8,36INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 231103.872505931
+    flow_rate[11,12,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 18.2311826147443
+    flow_rate[12,21,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 31.1866750222915
+    flow_rate[13,1,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 2.26387212688583
+    flow_rate[13,19,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 667920.216871551
+    flow_rate[14,9,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 576.225576225576
+    flow_rate[15,14,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 573.46084743345
+    flow_rate[16,18,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 106.221681564147
+    flow_rate[17,23,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 15.2928235120016
+    flow_rate[18,29,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 492.337674358222
+    flow_rate[18,31,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 1180219.57255568
+    flow_rate[19,20,20INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 667252.296654679
+    flow_rate[19,21,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 317.7
+    flow_rate[2,3,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 30.3853043579071
+    flow_rate[20,18,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 666585.044358025
+    flow_rate[20,19,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 145.805992489554
+    flow_rate[21,10,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 1011772.9212752
+    flow_rate[21,20,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 33.6140994757433
+    flow_rate[21,23,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 696593.632012613
+    flow_rate[21,42,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 492.966788925053
+    flow_rate[22,18,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 13.9718975335414
+    flow_rate[23,16,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 24.0811884647501
+    flow_rate[23,38,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 616097.72701444
+    flow_rate[23,7,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 79799.3113661607
+    flow_rate[24,31,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 446.975664029089
+    flow_rate[25,8,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 22.1712550479674
+    flow_rate[26,24,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 50.9584287365109
+    flow_rate[28,24,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 385.038457190512
+    flow_rate[28,24,36INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 67795.9895969028
+    flow_rate[28,35,20INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 21464.5960343905
+    flow_rate[29,28,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 310.243861847971
+    flow_rate[29,28,36INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 89349.9355668603
+    flow_rate[29,31,14INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 419782.484524464
+    flow_rate[29,31,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 348.6963494895
+    flow_rate[3,1,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 38.1318874469559
+    flow_rate[30,35,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 279.148249619482
+    flow_rate[31,30,20INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 1598402.05502306
+    flow_rate[31,30,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 250.56602925644
+    flow_rate[31,37,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 44.8958918961658
+    flow_rate[31,42,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 729.9363494895
+    flow_rate[32,23,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 8.78836495274851
+    flow_rate[32,33,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 630.311417982651
+    flow_rate[33,29,12INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 30.9963494895003
+    flow_rate[33,32,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 3.94007243322312
+    flow_rate[33,32,12INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 271047.303010773
+    flow_rate[33,43,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 599.315068493151
+    flow_rate[34,35,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 8.01370664384363
+    flow_rate[34,35,6INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 122515
+    flow_rate[34,37,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 492351.147658138
+    flow_rate[35,36,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 317.2
+    flow_rate[36,37,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 408.022008630228
+    flow_rate[37,33,36INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 491858.79651048
+    flow_rate[37,38,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 620.800444055512
+    flow_rate[38,34,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 615481.629287426
+    flow_rate[38,42,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 627.545313814081
+    flow_rate[39,35,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 25.3099568168061
+    flow_rate[4,8,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 7.94692575514493
+    flow_rate[43,26,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 29.7221061303253
+    flow_rate[43,37,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 158.6
+    flow_rate[43,41,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 599.315068493151
+    flow_rate[5,6,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 10.5513804143941
+    flow_rate[5,9,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 54.0858417570746
+    flow_rate[6,2,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 20.4349519418013
+    flow_rate[7,8,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 9.0554885075433
+    flow_rate[8,14,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 94933.6635265402
+    flow_rate[8,9,12INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 156.708033420362
+    flow_rate[8,9,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 135939.105106885
+    flow_rate[9,15,26INCH_CO2_ONSHORE,MODE_1,1,1,LL]:
+      Value: 158.751528614542
+    flow_rate[9,22,48INCH_PIPE,MODE_1,1,1,LL]:
+      Value: 65704.9743807735
+    flow_rate[9,32,26INCH_CO2_OFFSHORE,MODE_1,1,1,LL]:
+      Value: 630.311417982651
+    hydrogen_use[10,1]:
+      Value: 1
+    hydrogen_use[13,1]:
+      Value: 1
+    hydrogen_use[14,1]:
+      Value: 1
+    hydrogen_use[18,1]:
+      Value: 1
+    hydrogen_use[22,1]:
+      Value: 1
+    hydrogen_use[24,1]:
+      Value: 1
+    hydrogen_use[29,1]:
+      Value: 1
+    hydrogen_use[30,1]:
+      Value: 1
+    hydrogen_use[32,1]:
+      Value: 1
+    hydrogen_use[33,1]:
+      Value: 1
+    hydrogen_use[35,1]:
+      Value: 1
+    hydrogen_use[7,1]:
+      Value: 1
+    hydrogen_use[9,1]:
+      Value: 1
+    import_rate[NAT_GAS_HIGH_P,1,1,1,LL]:
+      Value: 73926.4437894575
+    import_rate[NAT_GAS_HIGH_P,10,1,1,LL]:
+      Value: 36350.1733364747
+    import_rate[NAT_GAS_HIGH_P,11,1,1,LL]:
+      Value: 98448.386119619
+    import_rate[NAT_GAS_HIGH_P,12,1,1,LL]:
+      Value: 69959.6590007549
+    import_rate[NAT_GAS_HIGH_P,13,1,1,LL]:
+      Value: 12224.9094851835
+    import_rate[NAT_GAS_HIGH_P,14,1,1,LL]:
+      Value: 14929.5354774807
+    import_rate[NAT_GAS_HIGH_P,15,1,1,LL]:
+      Value: 2239430.3216221
+    import_rate[NAT_GAS_HIGH_P,16,1,1,LL]:
+      Value: 443558.662736745
+    import_rate[NAT_GAS_HIGH_P,17,1,1,LL]:
+      Value: 82581.2469648086
+    import_rate[NAT_GAS_HIGH_P,18,1,1,LL]:
+      Value: 3864478.11440688
+    import_rate[NAT_GAS_HIGH_P,19,1,1,LL]:
+      Value: 928227.640556408
+    import_rate[NAT_GAS_HIGH_P,2,1,1,LL]:
+      Value: 53731.9030469715
+    import_rate[NAT_GAS_HIGH_P,20,1,1,LL]:
+      Value: 605836.222274578
+    import_rate[NAT_GAS_HIGH_P,21,1,1,LL]:
+      Value: 2720020.48540701
+    import_rate[NAT_GAS_HIGH_P,22,1,1,LL]:
+      Value: 75448.2466811234
+    import_rate[NAT_GAS_HIGH_P,24,1,1,LL]:
+      Value: 59285.4017511552
+    import_rate[NAT_GAS_HIGH_P,25,1,1,LL]:
+      Value: 119724.777259024
+    import_rate[NAT_GAS_HIGH_P,26,1,1,LL]:
+      Value: 114676.142073402
+    import_rate[NAT_GAS_HIGH_P,28,1,1,LL]:
+      Value: 403890.814849719
+    import_rate[NAT_GAS_HIGH_P,29,1,1,LL]:
+      Value: 2587173.41244465
+    import_rate[NAT_GAS_HIGH_P,3,1,1,LL]:
+      Value: 41831.5486808638
+    import_rate[NAT_GAS_HIGH_P,30,1,1,LL]:
+      Value: 154343.989960428
+    import_rate[NAT_GAS_HIGH_P,31,1,1,LL]:
+      Value: 1240521.78846699
+    import_rate[NAT_GAS_HIGH_P,32,1,1,LL]:
+      Value: 26180.7796054371
+    import_rate[NAT_GAS_HIGH_P,33,1,1,LL]:
+      Value: 21276.3911394048
+    import_rate[NAT_GAS_HIGH_P,34,1,1,LL]:
+      Value: 43274.0158767556
+    import_rate[NAT_GAS_HIGH_P,35,1,1,LL]:
+      Value: 25531.6693672858
+    import_rate[NAT_GAS_HIGH_P,36,1,1,LL]:
+      Value: 490438.84660323
+    import_rate[NAT_GAS_HIGH_P,37,1,1,LL]:
+      Value: 50125.7350572419
+    import_rate[NAT_GAS_HIGH_P,38,1,1,LL]:
+      Value: 36422.2966962693
+    import_rate[NAT_GAS_HIGH_P,39,1,1,LL]:
+      Value: 136673.766810753
+    import_rate[NAT_GAS_HIGH_P,4,1,1,LL]:
+      Value: 42913.3990777826
+    import_rate[NAT_GAS_HIGH_P,43,1,1,LL]:
+      Value: 1016939.37310376
+    import_rate[NAT_GAS_HIGH_P,5,1,1,LL]:
+      Value: 56977.4542377282
+    import_rate[NAT_GAS_HIGH_P,6,1,1,LL]:
+      Value: 53371.2862479986
+    import_rate[NAT_GAS_HIGH_P,7,1,1,LL]:
+      Value: 12549.4646042591
+    import_rate[NAT_GAS_HIGH_P,8,1,1,LL]:
+      Value: 634685.566192416
+    import_rate[NAT_GAS_HIGH_P,9,1,1,LL]:
+      Value: 11034.8740485727
+    inventory_rsrc[CLIQ_CO2_OFFSHORE,41,INJ_WELL,1,1,LL]:
+      Value: 10500000
+    inventory_rsrc[CLIQ_CO2_OFFSHORE,42,INJ_WELL,1,1,LL]:
+      Value: 32419856.8830457
+    num_dist[1,5,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[10,13,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[10,7,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[10,8,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[11,12,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[12,21,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[12,7,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[13,1,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[13,15,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[13,19,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[14,9,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[15,13,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[15,14,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[15,14,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[16,18,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[16,18,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[17,16,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[17,23,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[18,29,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[18,31,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[19,20,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[19,21,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[2,3,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[20,18,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[20,19,12INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[20,19,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[21,10,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[21,20,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[21,23,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[21,42,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[22,18,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[23,16,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[23,38,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[23,7,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[24,31,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[25,8,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[26,24,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[28,24,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[28,24,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[28,32,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[28,35,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[28,43,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[29,28,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[29,28,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[29,31,14INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[29,31,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[3,1,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[3,1,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[3,7,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[30,29,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[30,35,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[31,28,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[31,30,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[31,30,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[31,33,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[31,37,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[31,37,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[31,42,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 2
+    num_dist[32,23,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[32,33,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[32,33,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[33,29,12INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[33,32,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[33,32,12INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[33,43,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[34,35,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[34,35,6INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[34,37,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[35,36,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 2
+    num_dist[36,37,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[37,33,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[37,38,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[38,34,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[38,42,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[39,31,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[39,35,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[4,8,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[40,39,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[42,13,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[43,26,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[43,35,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[43,37,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[43,40,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[43,41,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[5,6,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[5,9,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist[6,2,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[6,8,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[7,10,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[7,8,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[8,14,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[8,7,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[8,9,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[8,9,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[9,15,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[9,19,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist[9,22,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist[9,32,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[1,5,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[10,13,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[10,7,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[10,8,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[11,12,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[12,21,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[12,7,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[13,1,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[13,15,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[13,19,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[14,9,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[15,13,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[15,14,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[15,14,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[16,18,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[16,18,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[17,16,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[17,23,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[18,29,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[18,31,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[19,20,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[19,21,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[2,3,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[20,18,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[20,19,12INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[20,19,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[21,10,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[21,20,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[21,23,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[21,42,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[22,18,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[23,16,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[23,38,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[23,7,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[24,31,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[25,8,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[26,24,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[28,24,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[28,24,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[28,32,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[28,35,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[28,43,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[29,28,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[29,28,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[29,31,14INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[29,31,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[3,1,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[3,1,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[3,7,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[30,29,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[30,35,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[31,28,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[31,30,20INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[31,30,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[31,33,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[31,37,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[31,37,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[31,42,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 2
+    num_dist_invest[32,23,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[32,33,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[32,33,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[33,29,12INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[33,32,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[33,32,12INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[33,43,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[34,35,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[34,35,6INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[34,37,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[35,36,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 2
+    num_dist_invest[36,37,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[37,33,36INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[37,38,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[38,34,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[38,42,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[39,31,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[39,35,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[4,8,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[40,39,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[42,13,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[43,26,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[43,35,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[43,37,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[43,40,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[43,41,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[5,6,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[5,9,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[6,2,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[6,8,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[7,10,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[7,8,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[8,14,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[8,7,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[8,9,12INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[8,9,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[9,15,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[9,19,26INCH_CO2_ONSHORE,1,LL]:
+      Value: 1
+    num_dist_invest[9,22,48INCH_PIPE,1,LL]:
+      Value: 1
+    num_dist_invest[9,32,26INCH_CO2_OFFSHORE,1,LL]:
+      Value: 1
+    num_end_use[INDUSTRIAL_H2_BOILER,9,1,LL]:
+      Value: 0.00700981916210046
+    num_end_use[INDUSTRIAL_H2_FURNACE,10,1,LL]:
+      Value: 0.0033332934109589
+    num_end_use[INDUSTRIAL_H2_FURNACE,13,1,LL]:
+      Value: 0.00776578005251142
+    num_end_use[INDUSTRIAL_H2_FURNACE,14,1,LL]:
+      Value: 0.00948387298630137
+    num_end_use[INDUSTRIAL_H2_FURNACE,18,1,LL]:
+      Value: 0.128569888675799
+    num_end_use[INDUSTRIAL_H2_FURNACE,22,1,LL]:
+      Value: 0.00656392694063927
+    num_end_use[INDUSTRIAL_H2_FURNACE,24,1,LL]:
+      Value: 0.00677281936073059
+    num_end_use[INDUSTRIAL_H2_FURNACE,29,1,LL]:
+      Value: 0.129086757990868
+    num_end_use[INDUSTRIAL_H2_FURNACE,30,1,LL]:
+      Value: 0.159680365296804
+    num_end_use[INDUSTRIAL_H2_FURNACE,32,1,LL]:
+      Value: 0.0270776255707763
+    num_end_use[INDUSTRIAL_H2_FURNACE,33,1,LL]:
+      Value: 0.0220319634703196
+    num_end_use[INDUSTRIAL_H2_FURNACE,35,1,LL]:
+      Value: 0.0143835616438356
+    num_end_use[INDUSTRIAL_H2_FURNACE,7,1,LL]:
+      Value: 0.00797195120547945
+    num_end_use[NET,1,1,LL]:
+      Value: 2.30909180705966e-05
+    num_end_use[POST_COMB_CAPTURE,1,1,LL]:
+      Value: 1.36900821832329e-07
+    num_end_use[POST_COMB_CAPTURE,10,1,LL]:
+      Value: 6.73151358082865e-08
+    num_end_use[POST_COMB_CAPTURE,11,1,LL]:
+      Value: 1.82311826147443e-07
+    num_end_use[POST_COMB_CAPTURE,12,1,LL]:
+      Value: 1.29554924075472e-07
+    num_end_use[POST_COMB_CAPTURE,13,1,LL]:
+      Value: 2.26387212688583e-08
+    num_end_use[POST_COMB_CAPTURE,14,1,LL]:
+      Value: 2.76472879212605e-08
+    num_end_use[POST_COMB_CAPTURE,15,1,LL]:
+      Value: 4.14709318818908e-06
+    num_end_use[POST_COMB_CAPTURE,16,1,LL]:
+      Value: 8.21404930993972e-07
+    num_end_use[POST_COMB_CAPTURE,17,1,LL]:
+      Value: 1.52928235120016e-07
+    num_end_use[POST_COMB_CAPTURE,18,1,LL]:
+      Value: 2.59644095260534e-06
+    num_end_use[POST_COMB_CAPTURE,19,1,LL]:
+      Value: 1.71894007510446e-06
+    num_end_use[POST_COMB_CAPTURE,2,1,LL]:
+      Value: 9.95035241610584e-08
+    num_end_use[POST_COMB_CAPTURE,20,1,LL]:
+      Value: 1.12191893013811e-06
+    num_end_use[POST_COMB_CAPTURE,21,1,LL]:
+      Value: 7.09213037980161e-07
+    num_end_use[POST_COMB_CAPTURE,22,1,LL]:
+      Value: 1.39718975335414e-07
+    num_end_use[POST_COMB_CAPTURE,24,1,LL]:
+      Value: 1.09787781020658e-07
+    num_end_use[POST_COMB_CAPTURE,25,1,LL]:
+      Value: 2.21712550479674e-07
+    num_end_use[POST_COMB_CAPTURE,26,1,LL]:
+      Value: 2.12363226061856e-07
+    num_end_use[POST_COMB_CAPTURE,28,1,LL]:
+      Value: 7.47945953425405e-07
+    num_end_use[POST_COMB_CAPTURE,29,1,LL]:
+      Value: 2.31061874897491e-07
+    num_end_use[POST_COMB_CAPTURE,3,1,LL]:
+      Value: 7.74658308904884e-08
+    num_end_use[POST_COMB_CAPTURE,30,1,LL]:
+      Value: 2.85822203630423e-07
+    num_end_use[POST_COMB_CAPTURE,31,1,LL]:
+      Value: 2.29726257123517e-06
+    num_end_use[POST_COMB_CAPTURE,32,1,LL]:
+      Value: 4.8482925195254e-08
+    num_end_use[POST_COMB_CAPTURE,33,1,LL]:
+      Value: 3.94007243322312e-08
+    num_end_use[POST_COMB_CAPTURE,34,1,LL]:
+      Value: 8.01370664384363e-08
+    num_end_use[POST_COMB_CAPTURE,35,1,LL]:
+      Value: 4.72808691986774e-08
+    num_end_use[POST_COMB_CAPTURE,36,1,LL]:
+      Value: 9.08220086302278e-07
+    num_end_use[POST_COMB_CAPTURE,37,1,LL]:
+      Value: 9.28254352911887e-08
+    num_end_use[POST_COMB_CAPTURE,38,1,LL]:
+      Value: 6.74486975856839e-08
+    num_end_use[POST_COMB_CAPTURE,39,1,LL]:
+      Value: 2.53099568168061e-07
+    num_end_use[POST_COMB_CAPTURE,4,1,LL]:
+      Value: 7.94692575514493e-08
+    num_end_use[POST_COMB_CAPTURE,43,1,LL]:
+      Value: 1.88322106130325e-06
+    num_end_use[POST_COMB_CAPTURE,5,1,LL]:
+      Value: 1.05513804143941e-07
+    num_end_use[POST_COMB_CAPTURE,6,1,LL]:
+      Value: 9.88357152740714e-08
+    num_end_use[POST_COMB_CAPTURE,7,1,LL]:
+      Value: 2.32397492671465e-08
+    num_end_use[POST_COMB_CAPTURE,8,1,LL]:
+      Value: 1.17534364109707e-06
+    num_end_use[POST_COMB_CAPTURE,9,1,LL]:
+      Value: 2.04349519418013e-08
+    num_process[ATR_GHR_CCS,18,1,LL]:
+      Value: 1
+    num_process[ATR_GHR_CCS,21,1,LL]:
+      Value: 1
+    num_process[ATR_GHR_CCS,29,1,LL]:
+      Value: 1
+    num_process[LARGE_CO2_COMPRESSOR,14,1,LL]:
+      Value: 1
+    num_process[LARGE_CO2_COMPRESSOR,38,1,LL]:
+      Value: 1
+    num_process[SMALL_CO2_COMPRESSOR,1,1,LL]:
+      Value: 1
+    num_process[SMALL_CO2_COMPRESSOR,19,1,LL]:
+      Value: 5
+    num_process[SMALL_CO2_COMPRESSOR,21,1,LL]:
+      Value: 3
+    num_process[SMALL_CO2_COMPRESSOR,29,1,LL]:
+      Value: 5
+    num_process[SMALL_CO2_COMPRESSOR,31,1,LL]:
+      Value: 6
+    num_process_invest[ATR_GHR_CCS,18,1,LL]:
+      Value: 1
+    num_process_invest[ATR_GHR_CCS,21,1,LL]:
+      Value: 1
+    num_process_invest[ATR_GHR_CCS,29,1,LL]:
+      Value: 1
+    num_process_invest[LARGE_CO2_COMPRESSOR,14,1,LL]:
+      Value: 1
+    num_process_invest[LARGE_CO2_COMPRESSOR,38,1,LL]:
+      Value: 1
+    num_process_invest[SMALL_CO2_COMPRESSOR,1,1,LL]:
+      Value: 1
+    num_process_invest[SMALL_CO2_COMPRESSOR,19,1,LL]:
+      Value: 5
+    num_process_invest[SMALL_CO2_COMPRESSOR,21,1,LL]:
+      Value: 3
+    num_process_invest[SMALL_CO2_COMPRESSOR,29,1,LL]:
+      Value: 5
+    num_process_invest[SMALL_CO2_COMPRESSOR,31,1,LL]:
+      Value: 6
+    num_strg[CLIQ_CO2_OFFSHORE,INJ_WELL,41,1,LL]:
+      Value: 7
+    num_strg[CLIQ_CO2_OFFSHORE,INJ_WELL,42,1,LL]:
+      Value: 22
+    num_strg_invest[CLIQ_CO2_OFFSHORE,INJ_WELL,41,1,LL]:
+      Value: 7
+    num_strg_invest[CLIQ_CO2_OFFSHORE,INJ_WELL,42,1,LL]:
+      Value: 22
+    prod_rate[ATR_GHR_CCS,18,1,1,LL]:
+      Value: 1800000
+    prod_rate[ATR_GHR_CCS,21,1,1,LL]:
+      Value: 1708366.55328781
+    prod_rate[ATR_GHR_CCS,29,1,1,LL]:
+      Value: 1800000
+    prod_rate[INDUSTRIAL_H2_BOILER,10,1,1,LL]:
+      Value: 4.04219867454635e-12
+    prod_rate[INDUSTRIAL_H2_BOILER,22,1,1,LL]:
+      Value: 8.0843973490927e-12
+    prod_rate[INDUSTRIAL_H2_BOILER,24,1,1,LL]:
+      Value: 8.0843973490927e-12
+    prod_rate[INDUSTRIAL_H2_BOILER,35,1,1,LL]:
+      Value: -1.61687946981854e-11
+    prod_rate[INDUSTRIAL_H2_BOILER,9,1,1,LL]:
+      Value: 70098.1916210046
+    prod_rate[INDUSTRIAL_H2_FURNACE,10,1,1,LL]:
+      Value: 33332.934109589
+    prod_rate[INDUSTRIAL_H2_FURNACE,13,1,1,LL]:
+      Value: 77657.8005251142
+    prod_rate[INDUSTRIAL_H2_FURNACE,14,1,1,LL]:
+      Value: 94838.7298630137
+    prod_rate[INDUSTRIAL_H2_FURNACE,18,1,1,LL]:
+      Value: 1285698.88675799
+    prod_rate[INDUSTRIAL_H2_FURNACE,22,1,1,LL]:
+      Value: 65639.2694063927
+    prod_rate[INDUSTRIAL_H2_FURNACE,24,1,1,LL]:
+      Value: 67728.1936073059
+    prod_rate[INDUSTRIAL_H2_FURNACE,29,1,1,LL]:
+      Value: 1290867.57990868
+    prod_rate[INDUSTRIAL_H2_FURNACE,30,1,1,LL]:
+      Value: 1596803.65296804
+    prod_rate[INDUSTRIAL_H2_FURNACE,32,1,1,LL]:
+      Value: 270776.255707763
+    prod_rate[INDUSTRIAL_H2_FURNACE,33,1,1,LL]:
+      Value: 220319.634703196
+    prod_rate[INDUSTRIAL_H2_FURNACE,35,1,1,LL]:
+      Value: 143835.616438356
+    prod_rate[INDUSTRIAL_H2_FURNACE,7,1,1,LL]:
+      Value: 79719.5120547945
+    prod_rate[LARGE_CO2_COMPRESSOR,14,1,1,LL]:
+      Value: 576.225576225576
+    prod_rate[LARGE_CO2_COMPRESSOR,38,1,1,LL]:
+      Value: 627.545313814081
+    prod_rate[NET,1,1,1,LL]:
+      Value: 230.909180705966
+    prod_rate[POST_COMB_CAPTURE,1,1,1,LL]:
+      Value: 13.6900821832329
+    prod_rate[POST_COMB_CAPTURE,10,1,1,LL]:
+      Value: 6.73151358082865
+    prod_rate[POST_COMB_CAPTURE,11,1,1,LL]:
+      Value: 18.2311826147443
+    prod_rate[POST_COMB_CAPTURE,12,1,1,LL]:
+      Value: 12.9554924075472
+    prod_rate[POST_COMB_CAPTURE,13,1,1,LL]:
+      Value: 2.26387212688583
+    prod_rate[POST_COMB_CAPTURE,14,1,1,LL]:
+      Value: 2.76472879212605
+    prod_rate[POST_COMB_CAPTURE,15,1,1,LL]:
+      Value: 414.709318818908
+    prod_rate[POST_COMB_CAPTURE,16,1,1,LL]:
+      Value: 82.1404930993972
+    prod_rate[POST_COMB_CAPTURE,17,1,1,LL]:
+      Value: 15.2928235120016
+    prod_rate[POST_COMB_CAPTURE,18,1,1,LL]:
+      Value: 259.644095260534
+    prod_rate[POST_COMB_CAPTURE,19,1,1,LL]:
+      Value: 171.894007510446
+    prod_rate[POST_COMB_CAPTURE,2,1,1,LL]:
+      Value: 9.95035241610584
+    prod_rate[POST_COMB_CAPTURE,20,1,1,LL]:
+      Value: 112.191893013811
+    prod_rate[POST_COMB_CAPTURE,21,1,1,LL]:
+      Value: 70.9213037980161
+    prod_rate[POST_COMB_CAPTURE,22,1,1,LL]:
+      Value: 13.9718975335414
+    prod_rate[POST_COMB_CAPTURE,24,1,1,LL]:
+      Value: 10.9787781020658
+    prod_rate[POST_COMB_CAPTURE,25,1,1,LL]:
+      Value: 22.1712550479674
+    prod_rate[POST_COMB_CAPTURE,26,1,1,LL]:
+      Value: 21.2363226061856
+    prod_rate[POST_COMB_CAPTURE,28,1,1,LL]:
+      Value: 74.7945953425405
+    prod_rate[POST_COMB_CAPTURE,29,1,1,LL]:
+      Value: 23.1061874897491
+    prod_rate[POST_COMB_CAPTURE,3,1,1,LL]:
+      Value: 7.74658308904884
+    prod_rate[POST_COMB_CAPTURE,30,1,1,LL]:
+      Value: 28.5822203630423
+    prod_rate[POST_COMB_CAPTURE,31,1,1,LL]:
+      Value: 229.726257123517
+    prod_rate[POST_COMB_CAPTURE,32,1,1,LL]:
+      Value: 4.8482925195254
+    prod_rate[POST_COMB_CAPTURE,33,1,1,LL]:
+      Value: 3.94007243322312
+    prod_rate[POST_COMB_CAPTURE,34,1,1,LL]:
+      Value: 8.01370664384363
+    prod_rate[POST_COMB_CAPTURE,35,1,1,LL]:
+      Value: 4.72808691986774
+    prod_rate[POST_COMB_CAPTURE,36,1,1,LL]:
+      Value: 90.8220086302278
+    prod_rate[POST_COMB_CAPTURE,37,1,1,LL]:
+      Value: 9.28254352911887
+    prod_rate[POST_COMB_CAPTURE,38,1,1,LL]:
+      Value: 6.74486975856839
+    prod_rate[POST_COMB_CAPTURE,39,1,1,LL]:
+      Value: 25.3099568168061
+    prod_rate[POST_COMB_CAPTURE,4,1,1,LL]:
+      Value: 7.94692575514493
+    prod_rate[POST_COMB_CAPTURE,43,1,1,LL]:
+      Value: 188.322106130325
+    prod_rate[POST_COMB_CAPTURE,5,1,1,LL]:
+      Value: 10.5513804143941
+    prod_rate[POST_COMB_CAPTURE,6,1,1,LL]:
+      Value: 9.88357152740714
+    prod_rate[POST_COMB_CAPTURE,7,1,1,LL]:
+      Value: 2.32397492671465
+    prod_rate[POST_COMB_CAPTURE,8,1,1,LL]:
+      Value: 117.534364109707
+    prod_rate[POST_COMB_CAPTURE,9,1,1,LL]:
+      Value: 2.04349519418013
+    prod_rate[SMALL_CO2_COMPRESSOR,1,1,1,LL]:
+      Value: 54.0858417570746
+    prod_rate[SMALL_CO2_COMPRESSOR,19,1,1,LL]:
+      Value: 317.7
+    prod_rate[SMALL_CO2_COMPRESSOR,21,1,1,LL]:
+      Value: 175.266788925053
+    prod_rate[SMALL_CO2_COMPRESSOR,29,1,1,LL]:
+      Value: 317.7
+    prod_rate[SMALL_CO2_COMPRESSOR,31,1,1,LL]:
+      Value: 381.24
+    storage_rate[CLIQ_CO2_OFFSHORE,41,INJ_WELL,1,1,LL]:
+      Value: 599.315068493151
+    storage_rate[CLIQ_CO2_OFFSHORE,42,INJ_WELL,1,1,LL]:
+      Value: 1850.44845222863
+    total_flow_rate[1,5,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 54.0858417570746
+    total_flow_rate[10,13,48INCH_PIPE,1,1,LL]:
+      Value: 746324.341738403
+    total_flow_rate[10,7,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 6.73151358082865
+    total_flow_rate[10,8,36INCH_PIPE,1,1,LL]:
+      Value: 231103.872505931
+    total_flow_rate[11,12,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 18.2311826147443
+    total_flow_rate[12,21,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 31.1866750222915
+    total_flow_rate[13,1,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 2.26387212688583
+    total_flow_rate[13,19,48INCH_PIPE,1,1,LL]:
+      Value: 667920.216871551
+    total_flow_rate[14,9,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 576.225576225576
+    total_flow_rate[15,14,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 573.46084743345
+    total_flow_rate[16,18,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 106.221681564147
+    total_flow_rate[17,23,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 15.2928235120016
+    total_flow_rate[18,29,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 492.337674358222
+    total_flow_rate[18,31,48INCH_PIPE,1,1,LL]:
+      Value: 1180219.57255568
+    total_flow_rate[19,20,20INCH_PIPE,1,1,LL]:
+      Value: 667252.296654679
+    total_flow_rate[19,21,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 317.7
+    total_flow_rate[2,3,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 30.3853043579071
+    total_flow_rate[20,18,48INCH_PIPE,1,1,LL]:
+      Value: 666585.044358025
+    total_flow_rate[20,19,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 145.805992489554
+    total_flow_rate[21,10,48INCH_PIPE,1,1,LL]:
+      Value: 1011772.9212752
+    total_flow_rate[21,20,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 33.6140994757433
+    total_flow_rate[21,23,48INCH_PIPE,1,1,LL]:
+      Value: 696593.632012613
+    total_flow_rate[21,42,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 492.966788925053
+    total_flow_rate[22,18,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 13.9718975335414
+    total_flow_rate[23,16,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 24.0811884647501
+    total_flow_rate[23,38,48INCH_PIPE,1,1,LL]:
+      Value: 616097.72701444
+    total_flow_rate[23,7,48INCH_PIPE,1,1,LL]:
+      Value: 79799.3113661607
+    total_flow_rate[24,31,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 446.975664029089
+    total_flow_rate[25,8,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 22.1712550479674
+    total_flow_rate[26,24,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 50.9584287365109
+    total_flow_rate[28,24,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 385.038457190512
+    total_flow_rate[28,24,36INCH_PIPE,1,1,LL]:
+      Value: 67795.9895969028
+    total_flow_rate[28,35,20INCH_PIPE,1,1,LL]:
+      Value: 21464.5960343905
+    total_flow_rate[29,28,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 310.243861847971
+    total_flow_rate[29,28,36INCH_PIPE,1,1,LL]:
+      Value: 89349.9355668603
+    total_flow_rate[29,31,14INCH_PIPE,1,1,LL]:
+      Value: 419782.484524464
+    total_flow_rate[29,31,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 348.6963494895
+    total_flow_rate[3,1,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 38.1318874469559
+    total_flow_rate[30,35,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 279.148249619482
+    total_flow_rate[31,30,20INCH_PIPE,1,1,LL]:
+      Value: 1598402.05502306
+    total_flow_rate[31,30,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 250.56602925644
+    total_flow_rate[31,37,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 44.8958918961658
+    total_flow_rate[31,42,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 729.9363494895
+    total_flow_rate[32,23,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 8.78836495274851
+    total_flow_rate[32,33,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 630.311417982651
+    total_flow_rate[33,29,12INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 30.9963494895003
+    total_flow_rate[33,32,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 3.94007243322312
+    total_flow_rate[33,32,12INCH_PIPE,1,1,LL]:
+      Value: 271047.303010773
+    total_flow_rate[33,43,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 599.315068493151
+    total_flow_rate[34,35,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 8.01370664384363
+    total_flow_rate[34,35,6INCH_PIPE,1,1,LL]:
+      Value: 122515
+    total_flow_rate[34,37,48INCH_PIPE,1,1,LL]:
+      Value: 492351.147658138
+    total_flow_rate[35,36,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 317.2
+    total_flow_rate[36,37,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 408.022008630228
+    total_flow_rate[37,33,36INCH_PIPE,1,1,LL]:
+      Value: 491858.79651048
+    total_flow_rate[37,38,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 620.800444055512
+    total_flow_rate[38,34,48INCH_PIPE,1,1,LL]:
+      Value: 615481.629287426
+    total_flow_rate[38,42,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 627.545313814081
+    total_flow_rate[39,35,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 25.3099568168061
+    total_flow_rate[4,8,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 7.94692575514493
+    total_flow_rate[43,26,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 29.7221061303253
+    total_flow_rate[43,37,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 158.6
+    total_flow_rate[43,41,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 599.315068493151
+    total_flow_rate[5,6,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 10.5513804143941
+    total_flow_rate[5,9,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 54.0858417570746
+    total_flow_rate[6,2,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 20.4349519418013
+    total_flow_rate[7,8,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 9.0554885075433
+    total_flow_rate[8,14,48INCH_PIPE,1,1,LL]:
+      Value: 94933.6635265402
+    total_flow_rate[8,9,12INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 156.708033420362
+    total_flow_rate[8,9,48INCH_PIPE,1,1,LL]:
+      Value: 135939.105106885
+    total_flow_rate[9,15,26INCH_CO2_ONSHORE,1,1,LL]:
+      Value: 158.751528614542
+    total_flow_rate[9,22,48INCH_PIPE,1,1,LL]:
+      Value: 65704.9743807735
+    total_flow_rate[9,32,26INCH_CO2_OFFSHORE,1,1,LL]:
+      Value: 630.311417982651
+    total_metrics[CAPEX,1,LL]:
+      Value: 7628484.18368235
+    total_metrics[CARCINOGENIC_EFFECTS,1,LL]:
+      Value: 20.8570070332191
+    total_metrics[CLIMATE_CHANGE_TOT,1,LL]:
+      Value: 2179752159.08015
+    total_metrics[FOSSIL_ENERGY_DEMAND,1,LL]:
+      Value: 145713890205.264
+    total_metrics[FOSSIL_RESOURCE_USE,1,LL]:
+      Value: 140139165420.168
+    total_metrics[FRESHWATER_AND_TERRESTRIAL_ACIDIFICATION,1,LL]:
+      Value: 10024758.4540317
+    total_metrics[FRESHWATER_ECOTOXICITY,1,LL]:
+      Value: 553602133.623179
+    total_metrics[IONISING_RADIATION,1,LL]:
+      Value: 299677756.918383
+    total_metrics[LAND_USE,1,LL]:
+      Value: 7431711896.49185
+    total_metrics[MARINE_EUTROPHICATION,1,LL]:
+      Value: 2354811.37235048
+    total_metrics[MINERALS_AND_METALS,1,LL]:
+      Value: 21313.4733681357
+    total_metrics[NON_CARCINOGENIC_EFFECTS,1,LL]:
+      Value: 156.149379547915
+    total_metrics[NUCLEAR_ENERGY_DEMAND,1,LL]:
+      Value: 4429078859.12958
+    total_metrics[OPEX,1,LL]:
+      Value: 4348618.19316406
+    total_metrics[OZONE_LAYER_DEPLETION,1,LL]:
+      Value: 1157.34284075948
+    total_metrics[PHOTOCHEMICAL_OZONE_CREATION,1,LL]:
+      Value: 7981201.47244447
+    total_metrics[PRIMARY_FOREST_ENERGY_DEMAND,1,LL]:
+      Value: 201425.837631766
+    total_metrics[RESPIRATORY_EFFECTS,1,LL]:
+      Value: 28.8935142857979
+    total_metrics[TERRESTRIAL_EUTROPHICATION,1,LL]:
+      Value: 25138504.3402204
+  Constraint: No values

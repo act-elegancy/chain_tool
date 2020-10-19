@@ -1,0 +1,836 @@
+# AMPL DATA FORMAT
+
+################### Sets ####################
+
+set T := 1;
+# Set T contains numbers which represent the total number of time intervals
+# over the course of the simulated time frame. An hourly resolution over
+# a week long period would yield 24 x 7 = 168 points. The above parametrisation
+# of 1 corresponds to a steady state with no temporal variation. 
+
+
+set TM := 1; 
+# Set TM characterises the number of investment terms over the time horizon.
+
+
+set R := 
+    NAT_GAS_HIGH_P
+    PROCESS_WATER
+    GENERATED_CO2
+    DOMESTIC_HEAT
+    INDUSTRIAL_HEAT
+    ELECTRICITY
+    MOBILITY_FUEL
+    BIOMASS
+    EMITTED_CO2
+    CGAS_H2
+    LIQ_H2
+    H2_BLEND_20
+    CLIQ_CO2_ONSHORE
+    CLIQ_CO2_OFFSHORE;
+# Set R contains total number of resources in the model instance.
+
+
+set IMP_R := NAT_GAS_HIGH_P BIOMASS ELECTRICITY;
+# Set IMP_R contains only the importable resources in the system.
+
+
+set STORAGE_R := CGAS_H2 CLIQ_CO2_OFFSHORE CLIQ_CO2_ONSHORE;
+# Set STORAGE_R contains only the storable resources in the system.
+
+
+set STORABLE_H2 := CGAS_H2;
+# Set STORABLE_H2 contains only the storable H2 in the system.
+
+
+set STORABLE_CO2 := CLIQ_CO2_OFFSHORE CLIQ_CO2_ONSHORE;
+# Set STORABLE_CO2 contains only the storable CO2 in the system.
+
+
+set J := 
+    SMR_FLUEGAS_CAP
+    ATR_GHR_CCS
+    WATER_ELECTROLYSIS
+    INJ_WELL
+    PRES_CYL_VESSEL
+    SALT_CAVERN
+    CRYO_H2_STORAGE
+    SMALL_CO2_COMPRESSOR
+    H2_REGASIFICATION
+    H2_LIQUEFACTION
+    CHP_PLANT
+    CCGT_WITH_H2
+    DOMESTIC_H2_BOILER
+    INDUSTRIAL_H2_BOILER
+    INDUSTRIAL_H2_FURNACE
+    DOMESTIC_GAS_BOILER
+    INDUSTRIAL_GAS_BOILER
+    INDUSTRIAL_GAS_FURNACE
+    H2_REFUELLING_STATION
+    FUEL_CELL_ELECTRIC_VEHICLE
+    HEAVY_DUTY_VEHICLE
+    H2_LORRY
+    H2_TRAIN
+    POST_COMB_CAPTURE
+    NET
+    PAY_FOR_CO2_STORAGE
+    MIXER_H2_BLEND
+    DOMESTIC_BLEND_BURNER
+    LARGE_CO2_COMPRESSOR;
+# Set J contains all the technologies.
+
+
+set PROCESS_TECH := 
+    SMR_FLUEGAS_CAP
+    ATR_GHR_CCS
+    WATER_ELECTROLYSIS
+    H2_REGASIFICATION
+    H2_LIQUEFACTION
+    H2_REFUELLING_STATION
+    SMALL_CO2_COMPRESSOR
+    LARGE_CO2_COMPRESSOR;
+# Set PROCESS_TECH contains all the production, conversion technologies.
+
+
+set END_USE_TECH :=
+    MIXER_H2_BLEND
+    DOMESTIC_BLEND_BURNER
+    CHP_PLANT
+    CCGT_WITH_H2
+    DOMESTIC_H2_BOILER
+    DOMESTIC_GAS_BOILER
+    INDUSTRIAL_GAS_BOILER
+    INDUSTRIAL_GAS_FURNACE
+    INDUSTRIAL_H2_BOILER
+    INDUSTRIAL_H2_FURNACE
+    FUEL_CELL_ELECTRIC_VEHICLE
+    HEAVY_DUTY_VEHICLE
+    H2_LORRY
+    H2_TRAIN
+    PAY_FOR_CO2_STORAGE
+    NET
+    POST_COMB_CAPTURE;
+# Set END_USE_TECH contains all the end-use technologies.    
+
+
+set H2_USE_TECH :=
+    CHP_PLANT
+    CCGT_WITH_H2
+    DOMESTIC_H2_BOILER
+    INDUSTRIAL_H2_BOILER
+    INDUSTRIAL_H2_FURNACE
+    FUEL_CELL_ELECTRIC_VEHICLE
+    HEAVY_DUTY_VEHICLE
+    H2_LORRY
+    H2_TRAIN;
+# Set H2_USE_TECH contains all the Hydrogen-based end-use technologies.    
+
+
+set INCUMBENT_USE_TECH :=
+    DOMESTIC_BLEND_BURNER
+    DOMESTIC_GAS_BOILER
+    INDUSTRIAL_GAS_BOILER
+    INDUSTRIAL_GAS_FURNACE;
+# Set INCUMBENT_USE_TECH contains all the incumbent end-use technologies.    
+
+
+set POSTCOMB :=
+    POST_COMB_CAPTURE;
+# Set POSTCOMB contains all the PCC options.    
+
+
+set NO_POSTCOMB:=
+    MIXER_H2_BLEND
+    DOMESTIC_BLEND_BURNER
+    CHP_PLANT
+    CCGT_WITH_H2
+    DOMESTIC_H2_BOILER
+    DOMESTIC_GAS_BOILER
+    INDUSTRIAL_GAS_BOILER
+    INDUSTRIAL_GAS_FURNACE
+    INDUSTRIAL_H2_BOILER
+    INDUSTRIAL_H2_FURNACE
+    FUEL_CELL_ELECTRIC_VEHICLE
+    HEAVY_DUTY_VEHICLE
+    H2_LORRY
+    H2_TRAIN
+    PAY_FOR_CO2_STORAGE
+    NET;
+# Set NO_POSTCOMB contains all the non-PCC technologies.    
+
+
+set STRG_TECH := 
+    INJ_WELL
+    SALT_CAVERN
+    CRYO_H2_STORAGE
+    PRES_CYL_VESSEL;
+# Set STRG_TECH contains all the storage technologies in the system.
+
+
+set CO2_STORAGE_TECH := INJ_WELL;
+# Set GEOLOGICAL_TECH contains all the CO2 storage technologies.
+
+
+set H2_STORAGE_TECH := SALT_CAVERN CRYO_H2_STORAGE PRES_CYL_VESSEL;
+# Set GEOLOGICAL_TECH contains all the H2 storage technologies.
+
+
+set M := CAPEX 
+         OPEX 
+         CLIMATE_CHANGE_TOT
+         FRESHWATER_AND_TERRESTRIAL_ACIDIFICATION
+         FRESHWATER_ECOTOXICITY
+         MARINE_EUTROPHICATION
+         TERRESTRIAL_EUTROPHICATION
+         CARCINOGENIC_EFFECTS
+         IONISING_RADIATION
+         NON_CARCINOGENIC_EFFECTS
+         OZONE_LAYER_DEPLETION
+         PHOTOCHEMICAL_OZONE_CREATION
+         RESPIRATORY_EFFECTS
+         FOSSIL_RESOURCE_USE
+         LAND_USE
+         MINERALS_AND_METALS
+         FOSSIL_ENERGY_DEMAND
+         NUCLEAR_ENERGY_DEMAND
+         PRIMARY_FOREST_ENERGY_DEMAND;
+# Set M contains performance metrics to compute.
+
+
+set LCA_METRICS := 
+         CLIMATE_CHANGE_TOT
+         FRESHWATER_AND_TERRESTRIAL_ACIDIFICATION
+         FRESHWATER_ECOTOXICITY
+         MARINE_EUTROPHICATION
+         TERRESTRIAL_EUTROPHICATION
+         CARCINOGENIC_EFFECTS
+         IONISING_RADIATION
+         NON_CARCINOGENIC_EFFECTS
+         OZONE_LAYER_DEPLETION
+         PHOTOCHEMICAL_OZONE_CREATION
+         RESPIRATORY_EFFECTS
+         FOSSIL_RESOURCE_USE
+         LAND_USE
+         MINERALS_AND_METALS
+         FOSSIL_ENERGY_DEMAND
+         NUCLEAR_ENERGY_DEMAND
+         PRIMARY_FOREST_ENERGY_DEMAND;
+# Set LCA_METRICS contain LCA metrics to evaluate.
+
+
+set D := 
+    48INCH_PIPE
+    36INCH_PIPE
+    20INCH_PIPE
+    14INCH_PIPE
+    12INCH_PIPE
+    6INCH_PIPE
+    48INCH_PIPE_NAT_GAS
+    36INCH_PIPE_NAT_GAS
+    20INCH_PIPE_NAT_GAS
+    14INCH_PIPE_NAT_GAS
+    12INCH_PIPE_NAT_GAS
+    6INCH_PIPE_NAT_GAS
+    12INCH_CO2_ONSHORE
+    26INCH_CO2_ONSHORE
+    12INCH_CO2_OFFSHORE
+    26INCH_CO2_OFFSHORE;
+# Set D contains the distribution technologies in the system.
+
+
+set CO2_PIPES := 
+    12INCH_CO2_ONSHORE
+    26INCH_CO2_ONSHORE
+    12INCH_CO2_OFFSHORE
+    26INCH_CO2_OFFSHORE;
+# Set CO2_PIPES contain all distribution technologies for CO2 transport.
+
+
+set ONSHORE_PIPES := 
+    12INCH_CO2_ONSHORE
+    26INCH_CO2_ONSHORE;
+# Set ONSHORE_PIPES contain all distribution tech for onshore CO2 transport.
+
+
+set OFFSHORE_PIPES := 
+    12INCH_CO2_OFFSHORE
+    26INCH_CO2_OFFSHORE;
+# Set OFFSHORE_PIPES contain all distribution tech for offshore CO2 transport.
+
+
+set HYDROGEN_PIPES :=
+    48INCH_PIPE
+    36INCH_PIPE
+    20INCH_PIPE
+    14INCH_PIPE
+    12INCH_PIPE
+    6INCH_PIPE;
+# Set HYDROGEN_PIPES contain all the distribution techs for H2 transport.
+
+
+set DIST_MODE := MODE_1;
+# Set DIST_MODE contains all the distribution modes in the system.
+
+
+set S := LL;
+# Set S contains all the scenarios in the system. 
+
+
+################### Parameters ####################
+
+param CO2_REMOVAL_FRACTION := 
+    1  1;
+# CO2_REMOVAL_FRACTION denotes the target reduction in emissions intensity by a fraction.
+
+
+param PROBABILITY := 
+    LL  1;
+# PROBABILITY denotes the different probabilities of stochastic scenarios.
+
+
+param OPER_TIME_INTERVAL :=
+    1  17520;
+# OPER_TIME_INTERVAL denotes the total number of time units in a time interval. 
+# in this case, 17520 half hours represent a yearly time horizon.
+
+
+param OPER_TIME_SIGNAL :=
+    INDUSTRIAL_HEAT    1    1;
+# OPER_TIME_SINGAL denotes the temporal variations in time units within the interval. 
+
+
+param OBJ_WEIGHT :=
+   CAPEX    1   1
+   OPEX     1   1;
+# OBJ_WEIGHT denotes the objective weighting of the performance metrics.
+
+
+param NAME_PLATE_CAP :=
+    SMR_FLUEGAS_CAP             1800000
+    ATR_GHR_CCS                 1800000
+    WATER_ELECTROLYSIS          180000
+    PRES_CYL_VESSEL             360000
+    SMALL_CO2_COMPRESSOR        63.54
+    LARGE_CO2_COMPRESSOR        635.4
+    PRES_CYL_VESSEL             0
+    SALT_CAVERN                 230400000
+    CRYO_H2_STORAGE             0
+    H2_REGASIFICATION           0
+    NET                         10000000
+    H2_LIQUEFACTION             10000000
+    CHP_PLANT                   10000000
+    CCGT_WITH_H2                10000000
+    DOMESTIC_H2_BOILER          10000000
+    INDUSTRIAL_H2_BOILER        10000000
+    INDUSTRIAL_H2_FURNACE       10000000
+    DOMESTIC_GAS_BOILER         10000000
+    INDUSTRIAL_GAS_BOILER       10000000
+    INDUSTRIAL_GAS_FURNACE      10000000
+    H2_REFUELLING_STATION       10000000
+    FUEL_CELL_ELECTRIC_VEHICLE  10000000
+    HEAVY_DUTY_VEHICLE          10000000
+    H2_LORRY                    10000000
+    H2_TRAIN                    10000000
+    MIXER_H2_BLEND              10000000
+    DOMESTIC_BLEND_BURNER       10000000
+    POST_COMB_CAPTURE           100000000
+    PAY_FOR_CO2_STORAGE         100000000;
+# NAME_PLATE_CAP states the installation capacity per unit of installed
+# technology, stated in MJ per half hour (for H2) and tons per half hour
+# for CO2 conversion technologies.
+
+
+param NETWORK_COEFF :=
+    48INCH_PIPE                 CAPEX   2792
+    36INCH_PIPE                 CAPEX   2024
+    20INCH_PIPE                 CAPEX   1000
+    14INCH_PIPE                 CAPEX   616
+    12INCH_PIPE                 CAPEX   488
+    6INCH_PIPE                  CAPEX   200
+    48INCH_PIPE_NAT_GAS         CAPEX   2200
+    36INCH_PIPE_NAT_GAS         CAPEX   1620
+    20INCH_PIPE_NAT_GAS         CAPEX   800
+    14INCH_PIPE_NAT_GAS         CAPEX   493
+    12INCH_PIPE_NAT_GAS         CAPEX   390
+    6INCH_PIPE_NAT_GAS          CAPEX   200
+    48INCH_PIPE                 OPEX    140
+    36INCH_PIPE                 OPEX    100
+    20INCH_PIPE                 OPEX    50
+    14INCH_PIPE                 OPEX    30.8
+    12INCH_PIPE                 OPEX    24.4
+    6INCH_PIPE                  OPEX    10
+    48INCH_PIPE_NAT_GAS         OPEX    140
+    36INCH_PIPE_NAT_GAS         OPEX    100
+    20INCH_PIPE_NAT_GAS         OPEX    50
+    14INCH_PIPE_NAT_GAS         OPEX    30.8
+    12INCH_PIPE_NAT_GAS         OPEX    24.4
+    6INCH_PIPE_NAT_GAS          OPEX    10
+    12INCH_CO2_ONSHORE          CAPEX   600
+    26INCH_CO2_ONSHORE          CAPEX   1300
+    12INCH_CO2_OFFSHORE	        CAPEX   780
+    26INCH_CO2_OFFSHORE	        CAPEX   1690
+    12INCH_CO2_ONSHORE          OPEX    3
+    26INCH_CO2_ONSHORE          OPEX    6.5
+    12INCH_CO2_OFFSHORE	        OPEX    7.8
+    26INCH_CO2_OFFSHORE	        OPEX    16.9;
+# NETWORK_COEFF determines the total CAPEX contribution and yearly OPEX
+# contribution by the installed disttribution technology in k£.
+
+
+param INV_COEFF :=
+    SMR_FLUEGAS_CAP             OPEX    1       25400
+    ATR_GHR_CCS                 OPEX    1       24400
+    WATER_ELECTROLYSIS          OPEX    1       2772
+    SMR_FLUEGAS_CAP             CAPEX   1       529000
+    ATR_GHR_CCS                 CAPEX   1       651000
+    WATER_ELECTROLYSIS          CAPEX   1       90000
+    NET                         CAPEX   1       0
+    NET                         OPEX    1       0
+    INJ_WELL                    CAPEX   1       66320
+    PRES_CYL_VESSEL             CAPEX   1       1145
+    PRES_CYL_VESSEL             OPEX    1       34
+    SMALL_CO2_COMPRESSOR        CAPEX   1       1950
+    SMALL_CO2_COMPRESSOR        OPEX    1       78
+    LARGE_CO2_COMPRESSOR        CAPEX   1       19500
+    LARGE_CO2_COMPRESSOR        OPEX    1       780
+    SALT_CAVERN                 CAPEX   1       32000
+    SALT_CAVERN                 OPEX    1       1280
+    CRYO_H2_STORAGE             CAPEX   1       0
+    CRYO_H2_STORAGE             OPEX    1       0
+    H2_REGASIFICATION           CAPEX   1       0
+    H2_REGASIFICATION           OPEX    1       0
+    H2_LIQUEFACTION             CAPEX   1       0
+    H2_LIQUEFACTION             OPEX    1       0
+    CHP_PLANT                   CAPEX   1       1407
+    CHP_PLANT                   OPEX    1       28.1
+    CCGT_WITH_H2                CAPEX   1       0
+    CCGT_WITH_H2                OPEX    1       0
+    DOMESTIC_H2_BOILER          CAPEX   1       0
+    DOMESTIC_H2_BOILER          OPEX    1       0
+    DOMESTIC_GAS_BOILER         CAPEX   1       0
+    DOMESTIC_GAS_BOILER         OPEX    1       0
+    INDUSTRIAL_H2_BOILER        CAPEX   1       0
+    INDUSTRIAL_H2_BOILER        OPEX    1       0
+    INDUSTRIAL_GAS_BOILER       CAPEX   1       0
+    INDUSTRIAL_GAS_BOILER       OPEX    1       0
+    INDUSTRIAL_H2_FURNACE       CAPEX   1       0
+    INDUSTRIAL_H2_FURNACE       OPEX    1       0
+    INDUSTRIAL_GAS_FURNACE      CAPEX   1       0
+    INDUSTRIAL_GAS_FURNACE      OPEX    1       0
+    INDUSTRIAL_GAS_FURNACE      CAPEX   1       0
+    INDUSTRIAL_GAS_FURNACE      OPEX    1       0
+    H2_REFUELLING_STATION       CAPEX   1       0
+    H2_REFUELLING_STATION       OPEX    1       0
+    FUEL_CELL_ELECTRIC_VEHICLE  CAPEX   1       0
+    FUEL_CELL_ELECTRIC_VEHICLE  OPEX    1       0
+    HEAVY_DUTY_VEHICLE          CAPEX   1       0
+    HEAVY_DUTY_VEHICLE          OPEX    1       0
+    H2_LORRY                    CAPEX   1       0
+    H2_LORRY                    OPEX    1       0
+    H2_TRAIN                    CAPEX   1       0
+    H2_TRAIN                    OPEX    1       0
+    POST_COMB_CAPTURE           CAPEX   1       0
+    POST_COMB_CAPTURE           OPEX    1       0;
+# INV_COEFF states the total CAPEX and annual contribution by and
+# installed production/ storage technology in k£. 
+
+
+param PROCESS_COEFF :=
+    SMR_FLUEGAS_CAP             OPEX     1      0
+    ATR_GHR_CCS                 OPEX     1      0
+    WATER_ELECTROLYSIS 	        OPEX     1      0
+    PAY_FOR_CO2_STORAGE         OPEX     1      0.03
+    POST_COMB_CAPTURE           OPEX     1      0.06
+    NET                         OPEX     1      0.15
+    SMALL_CO2_COMPRESSOR        OPEX     1      0
+    INDUSTRIAL_H2_BOILER        OPEX     1      0.0000014
+    INDUSTRIAL_H2_FURNACE       OPEX     1      0.0000014
+    LARGE_CO2_COMPRESSOR        OPEX     1      0;
+# PROCESS_COEFF states the total operating cost coefficient per unit of rsrc
+# processed. Similarly, CO2 conversion technologies should be incorporated.
+
+
+param IMPORT_COEFF :=
+    BIOMASS              OPEX    0.070
+    ELECTRICITY          OPEX    0.0000125
+    NAT_GAS_HIGH_P       OPEX    0.00000361;
+# IMPORT_COEFF describes the import price of each resource.
+
+
+param RESOURCE_CONV_RATE :=
+    ATR_GHR_CCS        	        NAT_GAS_HIGH_P         	-1.368
+    ATR_GHR_CCS        	        PROCESS_WATER          	 0
+    ATR_GHR_CCS        	        EMITTED_CO2              0.0000036
+    ATR_GHR_CCS        	        CLIQ_CO2_ONSHORE         0.0000625
+    ATR_GHR_CCS        	        CLIQ_CO2_OFFSHORE        0
+    ATR_GHR_CCS        	        CGAS_H2                  1
+    ATR_GHR_CCS        	        ELECTRICITY              0 
+    WATER_ELECTROLYSIS          NAT_GAS_HIGH_P         	 0
+    WATER_ELECTROLYSIS          PROCESS_WATER          	 0
+    WATER_ELECTROLYSIS          EMITTED_CO2              0
+    WATER_ELECTROLYSIS          CLIQ_CO2_ONSHORE         0
+    WATER_ELECTROLYSIS          CLIQ_CO2_OFFSHORE        0
+    WATER_ELECTROLYSIS          ELECTRICITY             -1.4
+    WATER_ELECTROLYSIS          CGAS_H2                  1
+    SMR_FLUEGAS_CAP             NAT_GAS_HIGH_P         	-1.455
+    SMR_FLUEGAS_CAP             PROCESS_WATER          	 0
+    SMR_FLUEGAS_CAP             EMITTED_CO2              0.0000066
+    SMR_FLUEGAS_CAP             CLIQ_CO2_ONSHORE         0.000059
+    SMR_FLUEGAS_CAP             CLIQ_CO2_OFFSHORE        0
+    SMR_FLUEGAS_CAP             CGAS_H2                  1
+    SMALL_CO2_COMPRESSOR        NAT_GAS_HIGH_P         	 0
+    SMALL_CO2_COMPRESSOR        PROCESS_WATER          	 0
+    SMALL_CO2_COMPRESSOR        EMITTED_CO2              0
+    SMALL_CO2_COMPRESSOR        CLIQ_CO2_ONSHORE        -1
+    SMALL_CO2_COMPRESSOR        CLIQ_CO2_OFFSHORE        1
+    SMALL_CO2_COMPRESSOR        CGAS_H2                  0
+    LARGE_CO2_COMPRESSOR        NAT_GAS_HIGH_P         	 0
+    LARGE_CO2_COMPRESSOR        PROCESS_WATER          	 0
+    LARGE_CO2_COMPRESSOR        EMITTED_CO2              0
+    LARGE_CO2_COMPRESSOR        CLIQ_CO2_ONSHORE        -1
+    LARGE_CO2_COMPRESSOR        CLIQ_CO2_OFFSHORE        1
+    LARGE_CO2_COMPRESSOR        CGAS_H2                  0 
+    H2_REGASIFICATION           CGAS_H2                 -1
+    H2_REGASIFICATION           LIQ_H2                   0.95
+    H2_LIQUEFACTION             LIQ_H2                   0.95
+    H2_LIQUEFACTION             CGAS_H2                 -1
+    H2_LIQUEFACTION             ELECTRICITY             -0.155
+    CHP_PLANT                   CGAS_H2                 -1
+    CHP_PLANT                   DOMESTIC_HEAT            0.31
+    CHP_PLANT                   ELECTRICITY              0.39
+    CCGT_WITH_H2                ELECTRICITY              0.6
+    CCGT_WITH_H2                CGAS_H2                 -1
+    DOMESTIC_H2_BOILER          NAT_GAS_HIGH_P           0
+    DOMESTIC_H2_BOILER          CGAS_H2                 -1
+    DOMESTIC_H2_BOILER          DOMESTIC_HEAT            0.94
+    DOMESTIC_GAS_BOILER         NAT_GAS_HIGH_P          -1
+    DOMESTIC_GAS_BOILER         DOMESTIC_HEAT            0.94
+    DOMESTIC_GAS_BOILER         EMITTED_CO2              0.0000806
+    INDUSTRIAL_H2_BOILER        CGAS_H2                 -1 
+    INDUSTRIAL_H2_BOILER        INDUSTRIAL_HEAT          0.9
+    INDUSTRIAL_H2_BOILER        ELECTRICITY              0
+    INDUSTRIAL_GAS_BOILER       NAT_GAS_HIGH_P          -1
+    INDUSTRIAL_GAS_BOILER       INDUSTRIAL_HEAT          0.9
+    INDUSTRIAL_GAS_BOILER       GENERATED_CO2            0.0000625
+    INDUSTRIAL_GAS_FURNACE      NAT_GAS_HIGH_P          -1
+    INDUSTRIAL_GAS_FURNACE      INDUSTRIAL_HEAT          0.9
+    INDUSTRIAL_GAS_FURNACE      GENERATED_CO2            0.0000625
+    INDUSTRIAL_H2_FURNACE       CGAS_H2                 -1
+    INDUSTRIAL_H2_FURNACE       INDUSTRIAL_HEAT          0.9
+    INDUSTRIAL_H2_FURNACE       ELECTRICITY              0
+    H2_REFUELLING_STATION       CGAS_H2                  0
+    H2_REFUELLING_STATION       ELECTRICITY              0
+    H2_REFUELLING_STATION       NAT_GAS_HIGH_P           0
+    H2_REFUELLING_STATION       MOBILITY_FUEL            0
+    FUEL_CELL_ELECTRIC_VEHICLE  MOBILITY_FUEL            0
+    FUEL_CELL_ELECTRIC_VEHICLE  ELECTRICITY              0
+    HEAVY_DUTY_VEHICLE          MOBILITY_FUEL            0
+    HEAVY_DUTY_VEHICLE          ELECTRICITY              0
+    H2_LORRY                    MOBILITY_FUEL            0
+    H2_LORRY                    ELECTRICITY              0
+    H2_TRAIN                    MOBILITY_FUEL            0
+    H2_TRAIN                    ELECTRICITY              0
+    MIXER_H2_BLEND              CGAS_H2                 -0.2
+    MIXER_H2_BLEND              NAT_GAS_HIGH_P          -0.8 
+    MIXER_H2_BLEND              H2_BLEND_20              1
+    DOMESTIC_BLEND_BURNER       EMITTED_CO2              0.0000645
+    DOMESTIC_BLEND_BURNER       DOMESTIC_HEAT            0.94 
+    DOMESTIC_BLEND_BURNER       H2_BLEND_20             -1
+    POST_COMB_CAPTURE           GENERATED_CO2           -0.8547
+    POST_COMB_CAPTURE           EMITTED_CO2              0.1
+    POST_COMB_CAPTURE           CLIQ_CO2_ONSHORE         1
+    POST_COMB_CAPTURE           NAT_GAS_HIGH_P           -5400
+    POST_COMB_CAPTURE           ELECTRICITY              0
+    NET                         GENERATED_CO2            0
+    NET                         EMITTED_CO2              0
+    NET                         CLIQ_CO2_ONSHORE         0
+    NET                         NAT_GAS_HIGH_P           0
+    NET                         ELECTRICITY              0
+    PAY_FOR_CO2_STORAGE         GENERATED_CO2            0
+    PAY_FOR_CO2_STORAGE         EMITTED_CO2              0
+    PAY_FOR_CO2_STORAGE         CLIQ_CO2_ONSHORE         -1
+    PAY_FOR_CO2_STORAGE         NAT_GAS_HIGH_P           0
+    PAY_FOR_CO2_STORAGE         ELECTRICITY              0;
+# RESOURCE_CONV_RATE states the steady state interconversion rate of resources
+# in each of the technologies within the system.
+
+
+param FLOW_CONSUMPTION_COEFF :=
+    48INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    48INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    48INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    48INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    48INCH_PIPE                 MODE_1          CGAS_H2                  1
+    36INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    36INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    36INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    36INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    36INCH_PIPE                 MODE_1          CGAS_H2                  1
+    20INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    20INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    20INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    20INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    20INCH_PIPE                 MODE_1          CGAS_H2                  1
+    14INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    14INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    14INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    14INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    14INCH_PIPE                 MODE_1          CGAS_H2                  1
+    12INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    12INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    12INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    12INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    12INCH_PIPE                 MODE_1          CGAS_H2                  1
+    6INCH_PIPE                  MODE_1          PROCESS_WATER            0
+    6INCH_PIPE                  MODE_1          EMITTED_CO2              0
+    6INCH_PIPE                  MODE_1          CLIQ_CO2_ONSHORE         0
+    6INCH_PIPE                  MODE_1          CLIQ_CO2_OFFSHORE        0
+    6INCH_PIPE                  MODE_1          CGAS_H2                  1
+    12INCH_CO2_OFFSHORE	        MODE_1          PROCESS_WATER            0
+    12INCH_CO2_OFFSHORE	        MODE_1          EMITTED_CO2              0
+    12INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_ONSHORE         0
+    12INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_OFFSHORE        1
+    12INCH_CO2_OFFSHORE	        MODE_1          CGAS_H2                  0
+    26INCH_CO2_OFFSHORE	        MODE_1          PROCESS_WATER            0
+    26INCH_CO2_OFFSHORE	        MODE_1          EMITTED_CO2              0
+    26INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_ONSHORE         0
+    26INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_OFFSHORE        1
+    26INCH_CO2_OFFSHORE	        MODE_1          CGAS_H2                  0
+    12INCH_CO2_ONSHORE          MODE_1          PROCESS_WATER            0
+    12INCH_CO2_ONSHORE          MODE_1          EMITTED_CO2              0
+    12INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_ONSHORE         1
+    12INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_OFFSHORE        0
+    12INCH_CO2_ONSHORE          MODE_1          CGAS_H2                  0
+    26INCH_CO2_ONSHORE          MODE_1          PROCESS_WATER            0
+    26INCH_CO2_ONSHORE          MODE_1          EMITTED_CO2              0
+    26INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_ONSHORE         1
+    26INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_OFFSHORE        0
+    26INCH_CO2_ONSHORE          MODE_1          CGAS_H2                  0
+    48INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    48INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    48INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    48INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    48INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              1
+    36INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    36INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    36INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    36INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    36INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              1
+    20INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    20INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    20INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    20INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    20INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              1
+    14INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    14INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    14INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    14INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    14INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              1
+    12INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    12INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    12INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    12INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    12INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              1
+    6INCH_PIPE_NAT_GAS          MODE_1          PROCESS_WATER            0
+    6INCH_PIPE_NAT_GAS          MODE_1          EMITTED_CO2              0
+    6INCH_PIPE_NAT_GAS          MODE_1          CLIQ_CO2_ONSHORE         0
+    6INCH_PIPE_NAT_GAS          MODE_1          CLIQ_CO2_OFFSHORE        0
+    6INCH_PIPE_NAT_GAS          MODE_1          H2_BLEND_20              1;
+# FLOW_CONSUMPTION_COEFF describes the "consumption" of resources within a 
+# distribution tech through a given mode. Useful to represent pressure drops.
+
+
+param FLOW_PRODUCTION_COEFF :=
+    48INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    48INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    48INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    48INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    48INCH_PIPE                 MODE_1          CGAS_H2                  0.999
+    36INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    36INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    36INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    36INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    36INCH_PIPE                 MODE_1          CGAS_H2                  0.999
+    20INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    20INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    20INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    20INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    20INCH_PIPE                 MODE_1          CGAS_H2                  0.999
+    14INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    14INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    14INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    14INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    14INCH_PIPE                 MODE_1          CGAS_H2                  0.999
+    12INCH_PIPE                 MODE_1          PROCESS_WATER            0
+    12INCH_PIPE                 MODE_1          EMITTED_CO2              0
+    12INCH_PIPE                 MODE_1          CLIQ_CO2_ONSHORE         0
+    12INCH_PIPE                 MODE_1          CLIQ_CO2_OFFSHORE        0
+    12INCH_PIPE                 MODE_1          CGAS_H2                  0.999
+    6INCH_PIPE                  MODE_1          PROCESS_WATER            0
+    6INCH_PIPE                  MODE_1          EMITTED_CO2              0
+    6INCH_PIPE                  MODE_1          CLIQ_CO2_ONSHORE         0
+    6INCH_PIPE                  MODE_1          CLIQ_CO2_OFFSHORE        0
+    6INCH_PIPE                  MODE_1          CGAS_H2                  0.999
+    12INCH_CO2_OFFSHORE	        MODE_1          PROCESS_WATER            0
+    12INCH_CO2_OFFSHORE	        MODE_1          EMITTED_CO2              0
+    12INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_ONSHORE         0
+    12INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_OFFSHORE        1
+    12INCH_CO2_OFFSHORE	        MODE_1          CGAS_H2                  0
+    26INCH_CO2_OFFSHORE	        MODE_1          PROCESS_WATER            0
+    26INCH_CO2_OFFSHORE	        MODE_1          EMITTED_CO2              0
+    26INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_ONSHORE         0
+    26INCH_CO2_OFFSHORE	        MODE_1          CLIQ_CO2_OFFSHORE        1
+    26INCH_CO2_OFFSHORE	        MODE_1          CGAS_H2                  0
+    12INCH_CO2_ONSHORE          MODE_1          PROCESS_WATER            0
+    12INCH_CO2_ONSHORE          MODE_1          EMITTED_CO2              0
+    12INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_ONSHORE         1
+    12INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_OFFSHORE        0
+    12INCH_CO2_ONSHORE          MODE_1          CGAS_H2                  0
+    26INCH_CO2_ONSHORE          MODE_1          PROCESS_WATER            0
+    26INCH_CO2_ONSHORE          MODE_1          EMITTED_CO2              0
+    26INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_ONSHORE         1
+    26INCH_CO2_ONSHORE          MODE_1          CLIQ_CO2_OFFSHORE        0
+    26INCH_CO2_ONSHORE          MODE_1          CGAS_H2                  0
+    48INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    48INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    48INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    48INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    48INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              0.999
+    36INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    36INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    36INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    36INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    36INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              0.999
+    20INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    20INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    20INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    20INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    20INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              0.999
+    14INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    14INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    14INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    14INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    14INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              0.999
+    12INCH_PIPE_NAT_GAS         MODE_1          PROCESS_WATER            0
+    12INCH_PIPE_NAT_GAS         MODE_1          EMITTED_CO2              0
+    12INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_ONSHORE         0
+    12INCH_PIPE_NAT_GAS         MODE_1          CLIQ_CO2_OFFSHORE        0
+    12INCH_PIPE_NAT_GAS         MODE_1          H2_BLEND_20              0.999
+    6INCH_PIPE_NAT_GAS          MODE_1          PROCESS_WATER            0
+    6INCH_PIPE_NAT_GAS          MODE_1          EMITTED_CO2              0
+    6INCH_PIPE_NAT_GAS          MODE_1          CLIQ_CO2_ONSHORE         0
+    6INCH_PIPE_NAT_GAS          MODE_1          CLIQ_CO2_OFFSHORE        0
+    6INCH_PIPE_NAT_GAS          MODE_1          H2_BLEND_20              0.999;
+# FLOW_PRODUCTION_COEFF describes the "production" of resources within a 
+# distribution tech through a given mode. Useful to represent pressure drops.
+
+
+param LEARNING_RED :=
+    ATR_GHR_CCS      1      1;
+# LEARNING_RATE describes an exogenous learning based cost reduction with time.
+
+
+param TECH_AVAILABILITY :=
+    ATR_GHR_CCS      1      1;
+# TECH_AVAILABILITY defines the investment period beyond which the
+# technology is available for investment.
+
+
+param INIT_TECH :=
+    ATR_GHR_CCS      1      1      0;
+# INIT_TECH defines the technology availability initially. It can be used to
+# represent the initial state of the system.
+
+
+param FLOW_RSRC_MAX :=
+    48INCH_PIPE                 55820000
+    36INCH_PIPE                 26790000
+    20INCH_PIPE                 2634077
+    14INCH_PIPE                 1051589
+    12INCH_PIPE                 706504
+    6INCH_PIPE                  122515
+    48INCH_PIPE_NAT_GAS         79740000
+    36INCH_PIPE_NAT_GAS         38270000
+    20INCH_PIPE_NAT_GAS         3760000
+    14INCH_PIPE_NAT_GAS         1500000
+    12INCH_PIPE_NAT_GAS         1000000
+    6INCH_PIPE_NAT_GAS          175000
+    12INCH_CO2_ONSHORE          158.6
+    26INCH_CO2_ONSHORE          634.5
+    12INCH_CO2_OFFSHORE	        158.6
+    26INCH_CO2_OFFSHORE	        634.5;
+# FLOW_RSRC_MAX represents the maximum flow capacity per unit of dist tech.
+
+
+param MAX_INJECTION_RATE :=
+    INJ_WELL                   1500000
+    SALT_CAVERN                180000;
+
+
+param MAX_RETRIEVAL_RATE :=
+    SALT_CAVERN                360000;
+
+
+load Chain_LCA_Scores.csv using=csv format=array : LCA_SCORE; 
+# LCA_SCORE represents the LCA scores attached to different techs.
+
+
+load Network_LCA_Scores.csv using=csv format=array : NETWORK_LCA; 
+# NETWORK_LCA represents LCA scores for installing network techs.
+
+
+load Strg_LCA_Scores.csv using=csv format=array : STRG_LCA; 
+# STRG_LCA represents LCA scores for installing storage techs.
+
+
+load Linear_Distances_Gridded.csv using=csv format=array : DISTANCE; 
+# DISTANCE represents the Euclidean distance between cells.
+
+
+load Demand_Gridded_1.csv using=csv : [Grid_id] DEMAND_1;
+# HYD_DEMAND_1 is the first demand vector.
+
+
+load Demand_Gridded_2.csv using=csv : [Grid_id] DEMAND_2;
+# HYD_DEMAND_2 is the second demand vector.
+
+
+load Demand_Gridded_3.csv using=csv : [Grid_id] DEMAND_3;
+# HYD_DEMAND_3 is the third demand vector.
+
+
+load Demand_Gridded_4.csv using=csv : [Grid_id] DEMAND_4;
+# HYD_DEMAND_4 is the fourth demand vector.
+
+
+load Import_Locations_Gridded.csv using=csv : [Grid_id] IMPORT_LOCATIONS; 
+# IMPORT_LOCATIONS identify the cells where resources may be imported.
+
+
+load CO2_Stores_Gridded.csv using=csv : [Grid_id] TOT_CO2_STORES; 
+# TOT_CO2_STORES describe the total CO2 storage capacity within a cell.
+
+
+load H2_Stores_Gridded.csv using=csv : [Grid_id] TOT_H2_STORES; 
+# TOT_H2_STORES describe the total H2 storage capacity within a cell.
+
+
+load Onshore_grids.csv using=csv : [Grid_id] ONSHORE_GRIDS; 
+# ONSHORE_GRIDS define all the onshore locations within the system.
+
+
+load Emission_Factor_Gridded.csv using=csv : [Grid_id] EMISSION_FACTOR; 
+# Deviations from baseline CO2 intensity factors on the basis of location-based emission sources.
+
+
+load Emissions_Gridded.csv using=csv : [Grid_id] EMISSIONS_GRIDDED; 
+# Inherent process emissions released in the region.
+
+
+load Location_Factor_Gridded.csv using=csv : [Grid_id] LOCATION_FACTOR; 
+# Location factor which specifies the overall capture cost based on concentration.
+
+
+load Availability_Gridded.csv using=csv : [Grid_id] AVAILABILITY; 
+# Available operation time as a fraction of the maximum for the different assets in each location.
+
